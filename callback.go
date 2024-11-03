@@ -59,7 +59,7 @@ func (c *Callback) IsInline() bool {
 // GetUnique returns the Unique used
 func (c *Callback) GetUnique() string {
 	if strings.Contains(c.Data, "?") {
-		return strings.TrimSpace(c.Data)
+		return strings.TrimSpace(strings.Split(c.Data, "?")[0])
 	}
 
 	return ""
